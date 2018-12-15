@@ -7,24 +7,25 @@ import (
 )
 
 type Actor struct {
-	Name string
-	Age  int
+	Name string `json:"name"`
+	Age  int    `json:"age"`
 }
 
 type Movie struct {
-	Title  string
-	Year   int
-	Color  bool
-	Actors []Actor
+	Title  string  `json:"title"`
+	Year   int     `json:"year"`
+	Color  bool    `json:"color"`
+	Actors []Actor `json:"actors"`
 }
 
 func main() {
+	//结构体转json
 	movies := []Movie{
 		{
 			Title:  "功夫",
 			Year:   1998,
 			Color:  true,
-			Actors: []Actor{Actor{Name:"成龙", Age: 53}, Actor{Name: "王宝强", Age: 33}},
+			Actors: []Actor{Actor{Name: "成龙", Age: 53}, Actor{Name: "王宝强", Age: 33}},
 		},
 		{
 			Title:  "僵尸先生",
@@ -38,4 +39,12 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s\n", data)
+
+	//json转结构体
+	var data2 []Movie
+	err2 := json.Unmarshal(data, &data2)
+	if err != nil {
+		log.Fatal(err2)
+	}
+	fmt.Println(data2)
 }
