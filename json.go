@@ -42,6 +42,7 @@ func main() {
 
 	//json转结构体
 	var data2 []Movie
+	//var data2 []struct{ Title string }
 	err2 := json.Unmarshal(data, &data2)
 	if err != nil {
 		log.Fatal(err2)
