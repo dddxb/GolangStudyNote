@@ -3,14 +3,19 @@ package main
 
 import (
 	"fmt"
+	"io"
 )
 
 type Example int
 
 type Test interface {
-	Write(p []byte) (int, error)
-	Read(p []byte) (int, error)
-	Close() error
+	//Writer(p []byte) (int, error)
+	//Reader(p []byte) (int, error)
+	//Close() error
+	//或者
+	io.Writer
+	io.Reader
+	io.Closer
 }
 
 func (e *Example) Write(p []byte) (int, error) {
