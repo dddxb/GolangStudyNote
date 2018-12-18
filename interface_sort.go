@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"sort"
+	"time"
 )
 
 func main() {
 	TypeGet()
 	StrSort()
 	IntSort()
+	time.Sleep(1*time.Second)
 }
 
 // 数字排序
