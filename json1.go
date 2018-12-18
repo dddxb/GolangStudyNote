@@ -34,8 +34,11 @@ func main() {
 			Actors: []Actor{Actor{Name: "林正英", Age: 43}, Actor{Name: "范冰冰", Age: 33}},
 		},
 	}
-	data, err := json.Marshal(movies)
-	if err != nil {
+	//if便捷写法
+/*	if data, err := json.Marshal(movies); err == nil {
+		fmt.Printf("%s\n", data)
+	}
+*/	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s\n", data)
