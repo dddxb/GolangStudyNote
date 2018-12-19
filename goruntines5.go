@@ -20,8 +20,8 @@ func connectServer(address string) {
 		log.Fatal(err)
 	}
 	defer conn.Close()
-	go mustCopy(os.Stdout, conn)  //开一个协程接收服务器消息并打印
-	mustCopy(conn, os.Stdin)
+	go mustCopy(os.Stdout, conn)  //开一个协程接收服务器消息并打印，把conn的消息发送到屏幕输出
+	mustCopy(conn, os.Stdin)  //把输入的东西发送到连接(服务器)
 }
 
 func mustCopy(dst io.Writer, src io.Reader) {
