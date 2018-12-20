@@ -1,26 +1,33 @@
 //select多路复用
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	a := make(chan byte)
 	b := make(chan byte)
-	go test(a, 'a')
-	go test(b, 'b')
+	done := make(chan struct{})
+	go test(a, 'a', done)
+	go test(b, 'b', done)
 	for {
 		select {
 		case x := <-a:
-			fmt.Printf("%s\n", string(x))
+			fmt.Println(string(x))
 		case y := <-b:
-			fmt.Printf("%s\n", string(y))
+			fmt.Println(string(y))
+		case <-done:
+			return
+		default:
 		}
 	}
 }
 
-func test(c chan byte, b byte) {
+func test(c chan byte, b byte, done chan struct{}) {
 	for i := 1; i < 1000; i++ {
 		c <- b
 	}
 	close(c)
+	done <- struct{}{}
 }

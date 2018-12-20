@@ -1,0 +1,74 @@
+//聊天室服务端，结合goroutines5客户端
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"net"
+)
+
+type client chan<- string
+
+var (
+	entering = make(chan client)
+	leaving  = make(chan client)
+	messages = make(chan string)
+)
+
+func main() {
+	listener, err := net.Listen("tcp", "0.0.0.0:9999")
+	if err != nil {
+		log.Fatal(err)
+	}
+	go broadcaster()
+	for {
+		conn, err := listener.Accept()
+		if err != nil {
+			log.Print(err)
+			continue
+		}
+		go handleConnect(conn)
+	}
+}
+
+func handleConnect(conn net.Conn) {
+	ch := make(chan string)
+	go clientWrite(conn, ch)
+	who := conn.RemoteAddr().String()
+	ch <- "You are " + who + "\n"
+	messages <- who + " has arrived\n"
+	entering <- ch
+	input := bufio.NewScanner(conn)
+	for input.Scan() {
+		messages <- who + ": " + input.Text() + "\n"
+	}
+
+	//客户端断开之后
+	leaving <- ch
+	messages <- who + " has left\n"
+	conn.Close()
+}
+
+func clientWrite(conn net.Conn, ch chan string) {
+	for msg := range ch {
+		fmt.Fprintf(conn, msg)
+	}
+}
+
+func broadcaster() {
+	clients := make(map[client]bool)
+	for {
+		select {
+		case msg := <-messages:
+			for cli := range clients {
+				cli <- msg
+			}
+		case cli := <-entering:
+			clients[cli] = true
+		case cli := <-leaving:
+			delete(clients, cli)
+			close(cli)
+		}
+	}
+}
