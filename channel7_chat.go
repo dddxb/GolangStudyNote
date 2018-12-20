@@ -37,16 +37,16 @@ func handleConnect(conn net.Conn) {
 	go clientWrite(conn, ch)
 	who := conn.RemoteAddr().String()
 	ch <- "You are " + who + "\n"
-	messages <- who + " has arrived\n"
+	messages <- who + " has join.\n"
 	entering <- ch
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
-		messages <- who + ": " + input.Text() + "\n"
+		messages <- who + ": " + input.Text() + ".\n"
 	}
 
 	//客户端断开之后
 	leaving <- ch
-	messages <- who + " has left\n"
+	messages <- who + " has left.\n"
 	conn.Close()
 }
 
