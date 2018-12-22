@@ -46,6 +46,7 @@ func wsHandle(w http.ResponseWriter, r *http.Request) {
 				break
 				log.Println(err)
 			}
+			fmt.Println(mt)
 			push(mt, message, conn)
 		}
 	}
