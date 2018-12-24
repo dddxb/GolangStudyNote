@@ -1,4 +1,4 @@
-package lib
+package backup
 
 /*import (
 	"database/sql"
@@ -6,11 +6,7 @@ package lib
 	"GolangStudy/simpleRoute/model"
 )
 
-type SQL struct {
-	Db *sql.DB
-}
-
-func (s *SQL) Connect(sqlType string, host string, port int, user string, password string, dbName string, charset string){
+func Connect(sqlType string, host string, port int, user string, password string, dbName string, charset string){
 	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=%s", user, password, host, port, dbName, charset))
 	s.CheckError(err)
 	db.Ping()
@@ -18,7 +14,7 @@ func (s *SQL) Connect(sqlType string, host string, port int, user string, passwo
 	s.Db = db
 }
 
-func (s *SQL) Query(sql string, user model.User) {
+func Query(sql string, user model.User) {
 	rows, err := s.Db.Query(sql)
 	s.CheckError(err)
 	defer rows.Close()
@@ -31,7 +27,7 @@ func (s *SQL) Query(sql string, user model.User) {
 	fmt.Println(data)
 }
 
-func (s *SQL) Insert(sql string, param ...interface{}) int64 {
+func Insert(sql string, param ...interface{}) int64 {
 	prepare, err := s.Db.Prepare(sql)
 	s.CheckError(err)
 	res, err := prepare.Exec(param...)
@@ -41,7 +37,7 @@ func (s *SQL) Insert(sql string, param ...interface{}) int64 {
 	return id
 }
 
-func (s *SQL) Update(sql string, param ...interface{}) int64 {
+func Update(sql string, param ...interface{}) int64 {
 	prepare, err := s.Db.Prepare(sql)
 	s.CheckError(err)
 	res, err := prepare.Exec(param...)
@@ -51,7 +47,7 @@ func (s *SQL) Update(sql string, param ...interface{}) int64 {
 	return affect
 }
 
-func (s *SQL) Delete(sql string, param ...interface{}) int64 {
+func Delete(sql string, param ...interface{}) int64 {
 	prepare, err := s.Db.Prepare(sql)
 	s.CheckError(err)
 	res, err := prepare.Exec(param...)
@@ -61,7 +57,7 @@ func (s *SQL) Delete(sql string, param ...interface{}) int64 {
 	return affect
 }
 
-func (s *SQL) CheckError(err error) {
+func CheckError(err error) {
 	if err != nil {
 		panic(err)
 	}
