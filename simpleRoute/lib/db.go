@@ -1,9 +1,9 @@
 package lib
 
-import (
+/*import (
 	"database/sql"
 	"fmt"
-	"ginStart/model"
+	"GolangStudy/simpleRoute/model"
 )
 
 type SQL struct {
@@ -66,3 +66,4 @@ func (s *SQL) CheckError(err error) {
 		panic(err)
 	}
 }
+*/

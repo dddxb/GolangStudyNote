@@ -5,17 +5,19 @@ import (
 	"net/http"
 )
 
-type HomeController struct {
+type HomeControllerBase struct {
 }
 
-func (HomeController) Home(w http.ResponseWriter, r *http.Request) {
+var HomeController HomeControllerBase
+
+func (HomeControllerBase) Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "home")
 }
 
-func (HomeController) Hello(w http.ResponseWriter, r *http.Request) {
+func (HomeControllerBase) Hello(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("hello"))
 }
 
-func (HomeController) Query(w http.ResponseWriter, r *http.Request) {
+func (HomeControllerBase) Query(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("query"))
 }

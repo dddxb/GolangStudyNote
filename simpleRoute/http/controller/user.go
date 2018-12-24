@@ -6,10 +6,12 @@ import (
 	"net/http"
 )
 
-type UserController struct {
+type UserControllerBase struct {
 }
 
-func (UserController) View(w http.ResponseWriter, r *http.Request) {
+var UserController UserControllerBase
+
+func (UserControllerBase) View(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	fmt.Fprintf(w, "Your input id is: %s", vars["id"])
 }
