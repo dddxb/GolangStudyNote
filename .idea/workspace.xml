@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb55e56d-d28b-4d76-8490-c1039761f3a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simpleHttpFramework/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/.idea/ginStart.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/backup/db.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/http/controller/admin.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/http/controller/home.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/http/controller/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/lib/ms.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleRoute/model/user.go" beforeDir="false" />
-    </list>
+    <list default="true" id="fb55e56d-d28b-4d76-8490-c1039761f3a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,43 +84,33 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="go" value="25" />
-          <entry key="md" value="13" />
+          <entry key="md" value="104" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Go" value="25" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PLAIN_TEXT" value="104" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="1" />
-          <entry key="go" value="18" />
-          <entry key="md" value="1" />
+          <entry key="go" value="24" />
+          <entry key="md" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="Go" value="18" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Go" value="24" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simpleHttpFramework/Readme.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/goroutines3.go" />
         <option value="$PROJECT_DIR$/goroutines2.go" />
         <option value="$PROJECT_DIR$/goruntines4.go" />
         <option value="$PROJECT_DIR$/goruntines5.go" />
@@ -216,6 +191,7 @@
         <option value="$PROJECT_DIR$/simpleHttpFramework/http/route.go" />
         <option value="$PROJECT_DIR$/simpleHttpFramework/http/controller/admin.go" />
         <option value="$PROJECT_DIR$/simpleHttpFramework/Readme.md" />
+        <option value="$PROJECT_DIR$/websocket_chat/Readme.md" />
       </list>
     </option>
   </component>
@@ -243,11 +219,6 @@
               <item name="GolangStudyNote" type="b2602c69:ProjectViewProjectNode" />
               <item name="GolangStudyNote" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GolangStudyNote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GolangStudyNote" type="462c0819:PsiDirectoryNode" />
-              <item name="simpleHttpFramework" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -264,15 +235,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\go\src\GolangStudy\simpleRoute\backup" />
+      <recent name="C:\Users\Administrator\go\src\GolangStudy\websocket_chat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\go\src\GolangStudy\simpleRoute\backup" />
       <recent name="C:\Users\Administrator\go\src\GolangStudy\simpleRoute\lib" />
       <recent name="C:\Users\Administrator\go\src\GolangStudy" />
       <recent name="C:\Users\Administrator\go\src\GolangStudy\globalMemery" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\go\src\GolangStudy\simpleRoute\backup" />
-      <recent name="C:\Users\Administrator\go\src\GolangStudy\websocket_chat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -352,9 +323,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -367,7 +337,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026042" side_tool="true" weight="0.2889138" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.26384366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.26384366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -401,13 +371,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/map1.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -508,13 +471,6 @@
     <entry file="file://$PROJECT_DIR$/../ginStart/http/controller/home.go" />
     <entry file="file://$PROJECT_DIR$/../ginStart/http/controller/admin.go" />
     <entry file="file://$PROJECT_DIR$/../ginStart/main.go" />
-    <entry file="file://$PROJECT_DIR$/websocket_chat/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleRoute/lib/ms.go" />
     <entry file="file://$PROJECT_DIR$/simpleRoute/lib/config.go" />
     <entry file="file://$PROJECT_DIR$/simpleRoute/model/user.go" />
@@ -570,27 +526,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/lib/init.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleHttpFramework/model/user.go">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleHttpFramework/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/http/controller/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#20#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/backup/db.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/lib/init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -614,19 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/http/controller/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#20#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleHttpFramework/backup/db.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleHttpFramework/http/route.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -634,10 +590,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/websocket_chat/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simpleHttpFramework/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websocket_chat/Readme.md">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
