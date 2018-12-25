@@ -2,7 +2,7 @@
 复合 数据类型函数传值测试
 测试结果：
 	1、array、struct传本身不是指针
-	2、slice、map穿本身也会变成指针
+	2、slice、map传本身也会变成指针
  */
 package main
 
