@@ -14,7 +14,7 @@ func main() {
 	}
 
 	var reply int
-	err = client.Call("GameService.Login", "login", &reply)
+	err = client.Call("GameService.Login", 1, &reply)
 	if err != nil {
 		log.Fatal(err)
 	}

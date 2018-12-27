@@ -5,6 +5,7 @@ import (
 	"log"
 	"net"
 	"net/rpc"
+	"net/rpc/jsonrpc"
 )
 
 type HelloService struct{}
@@ -14,20 +15,8 @@ func (p *HelloService) Hello(request string, reply *[]int) error {
 	return nil
 }
 
-type GameService struct{}
-
-func (p *GameService) Login(request string, reply *int) error {
-	result := 0
-	if request == "login" {
-		result = 1
-	}
-	*reply = result
-	return nil
-}
-
 func main() {
 	rpc.RegisterName("HelloService", new(HelloService))
-	rpc.RegisterName("GameService", new(GameService))
 	listen, err := net.Listen("tcp", ":1234")
 	if err != nil {
 		log.Fatal(err)
@@ -38,6 +27,6 @@ func main() {
 		if err != nil {
 			log.Println(err)
 		}
-		go rpc.ServeConn(conn)
+		go rpc.ServeCodec(jsonrpc.NewServerCodec(conn))
 	}
 }
